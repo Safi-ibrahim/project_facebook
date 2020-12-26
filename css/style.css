@@ -1,0 +1,703 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #18191a;
+    font-size: 16px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    /* background-color: #232425; */
+    background: rgb(13,20,26);
+    background: linear-gradient(180deg, rgba(13,20,26,1) 0%, rgba(35,36,37,1) 100%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+nav{ 
+    width: 100%;
+    height: auto;
+    /* background-color: #242526; */
+    background-color: #18191a;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* padding-top: 13px; */
+    padding: 0 20px 5px 20px;
+    
+    /* margin-bottom: 2px; */
+}
+
+i{  
+    color: white;
+}
+
+/* ////////////////////////////// navالقسم اليساري من ال ////////////////////////// */
+
+.left_nav{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding-top: 8px;
+}
+.child{
+    background-color: #FFFFFF1A;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 5px;
+    transition: 250ms;
+}
+.n_notification{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+
+.mini_photo{
+    width: 70px;
+    height: 37px ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #2D88FF33 ;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1px 0 0 7px ;
+    transition: 250ms;
+}
+.mini_photo img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+
+}
+.mini_photo p{
+    color: #2E89FF;
+    font-size: 14px;
+}
+.left_nav >*{
+    cursor: pointer;
+}
+.child:hover{
+    background-color: #ffffff34;
+}
+.mini_photo:hover{
+    background-color: #2d88ff4f ;
+}
+
+
+/* ///////////////////////// navالقسم الأوسط من ال//////////////////  */
+
+.center_nav{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    padding: 1px 0;
+}
+.center_child{
+    width: 90px;
+    height: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    transition: 250ms;
+}
+ .center_child i{
+     font-size: 20px;
+ }
+.center_child:hover{
+    background-color: #FFFFFF1A;
+}
+
+.n_notification_center{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    left: 23px;
+}
+
+
+/*  ////////////////// "قسم البحث" nav  القسم الأيمن من ال////////////////////  */
+
+
+.right_bar{
+    display: flex;
+    flex-direction: row-reverse ;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    /* background-color: #2E89FF; */
+}
+.right_bar *{
+    cursor: pointer;
+}
+.search_bar{
+    background-color: #FFFFFF1A;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+    width: 80%;
+    overflow: hidden;
+}
+.search_bar input{
+    background-color: #ffffff00;
+    width: 83%;
+    height: 35px;
+    outline: none;
+    border: none;
+    color:white;
+}
+.right_bar i{
+    position: absolute;
+    top: 8px;    
+    right: 13px;
+}
+
+.right_bar img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+
+/* ///////////////////////////headerقسم الغلاف من ال /////////////////////// */
+.cover{
+    display: flex;
+    width: 60%;
+    height: 45vh;
+    /* background-color: aqua; */
+    background-image: url(../img/cover.jpg) ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.profile_img {
+    width: 125px;
+    height: 125px;
+    background-image: url(../img/profile_photo.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: #151616 solid 2px;
+    position: absolute;
+    bottom: -15px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    cursor: pointer;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #15161613;
+    transition: 250ms;
+}
+.layer:hover{
+    background-color: #ffffff18;
+}
+.change_photo{
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff0c;
+    border-radius: 50%;
+    text-align:center;
+    padding-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transition: 250ms;
+}
+.change_photo:hover{
+    background-color: #ffffff18;
+}
+
+.cover a{
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff2c;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding-top: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    transition: 250ms;
+}
+.cover a:hover{
+    background-color: #ffffff49;
+    text-decoration: none;             
+}
+header h2{
+    margin-top: 20px;
+}
+header a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #2E89FF;
+    transition: 250ms;
+}
+header a:hover{
+    text-decoration: underline;
+}
+header p{
+    color: #B0B3B8;
+}
+
+.line{
+    width: 55%;
+    margin-top: 10px;
+    border-bottom: #ffffff2c 1px solid;
+    margin-bottom: 2px;
+}
+/* ////////////////////////////////////////////links ////////////////////// */
+
+.links_tab{
+    width: 55% ;
+    /* background-color: #2E89FF; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    /* list-style: none; */
+}
+.text_link{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items:center ; */
+}
+.text_link li{
+    width: auto;
+    height: 40px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 5px;
+    color: #B0B3B8;
+    cursor: pointer;
+    transition: 250ms;
+}
+.text_link li:hover{
+    background-color: #ffffff3d;
+
+}
+
+.icon_link{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+   
+}
+.icon_link li{
+    width: auto;
+    height: 35px;
+    margin: 3px 0 0 5px;
+    text-align: center;
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: #B0B3B8;
+    background-color: #FFFFFF1A;
+    transition: 250ms;
+    cursor: pointer;
+}
+.icon_link li:hover{
+    background-color: #ffffff34;
+
+}
+
+/* ////////////////////////////////headerانتهى ال////////////////// */
+
+/* ................... */
+
+/* //////////////////////////////// Main  بداية ال /////////////////*/
+
+main{
+    width: 100%;
+    background-color: #18191a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* //////////////////القسم الأيمن "نبذة مختصرة" .ظ  /////////////*/
+.right-section{
+    width: 22%;
+    height: auto;
+    background-color: #232425;
+    margin-left:10px ;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    /* align-content: flex-start; */
+    /* justify-content: flex-start; */
+}
+.information-list{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+.information-list i{
+    margin-left: 10px;
+    color: #B0B3B8;
+}
+.information-list p{
+    color: #E4E6EB;
+    font-size: 14px;
+}
+.right-section a{
+    width: 100%;
+    height: 30px;
+    background-color: #ffffff2c;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 250ms;
+}
+.right-section a:hover{
+    background-color: #ffffff34;
+}
+
+/* القسم الأيسر ويحوي على ثلاث اقسام :
+ 1-قسم اضافة منشور
+ 2-قسم الاعدادات
+ 3-قسم المنشورات 
+ */
+
+.left-section{
+    width: 32%;
+    /* height: 265px; */
+    /* background-color: #232425; */
+    /* margin-top: 15px; */
+    /* padding: 10px; */
+    /* border-radius: 5px; */
+
+}
+.left-section > *{
+    border-radius: 5px;
+    margin-bottom: 7px;
+    background-color: #232425;
+}
+
+
+/* ////////////////////////////////////قسم اضافة منشور /////////////////// */
+.add-post{
+    width: 100%;
+    /* height: 90px; */
+    /* background-color: #2E89FF; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    margin-top: 15px;
+}
+.top{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #2E89FF; */
+}
+.profile_img_mini{
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/profile_photo.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: #1516168e solid 1px;
+    cursor: pointer;
+}
+.top input{
+    width: 85%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #FFFFFF1A;
+    color: #E4E6EB;
+    font-size: 16px;
+    padding: 0 10px;
+
+}
+.line_Of_top{
+    width: 100%;
+    margin-top: 3px;
+    border-bottom: #ffffff2c 1px solid;
+    margin-bottom: 2px;
+}
+.option{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+    
+}
+.option i{
+    font-size: 16px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+.option a{
+    width: 32%;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    color: #B0B3B8;
+    transition: 250ms;
+}
+.option a:hover{
+    background-color: #ffffff3d;
+}
+
+
+/* //////////////////////////قسم الاعدادات //////////////////// */
+
+.setting{
+    width: 100%;
+    /* height: 70px; */
+    /* background-color: #2E89FF; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+}
+.top-setting{
+    width: 100%;
+    /* height: 40px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+    /* background-color: #2E89FF; */
+}
+.top-setting a{
+    padding: 5px 7px;
+    background-color: #FFFFFF1A;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: 250ms;
+}
+.top-setting a:hover{
+    background-color: #ffffff3d;
+
+}
+
+.top-setting i{
+    margin-left: 2px;
+}
+.bottom-setting{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+.bottom-setting i{
+    margin-left: 7px;
+}
+.bottom-setting a{
+    width: 50%;
+    padding: 7px 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: 250ms;
+}
+.bottom-setting a:hover{
+    background-color: #FFFFFF1A;
+}
+
+
+/* ///////////////////////////////قسم المنشورات ////////////////////// */
+
+.posts{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 10px;
+    position: relative;
+    padding: 2px 10px;
+}
+.top_post{
+    width: 100%;
+    /* height: 40px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+.post_detail{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-right: 10px;
+}
+
+.post_detail div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 3px;
+}
+.post_detail div >*{
+    font-size: 12px;
+    padding-right: 2px;
+}
+.post_detail h5{
+    cursor: pointer;
+}
+.post_option{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    transition: 250ms;
+}
+.post_option:hover{
+    background-color: #FFFFFF1A;
+}
+
+/* //////////////////// لاعطاء اللون الازرق للصفحة الحالية  //////////////////////*/
+.active{
+    color: #2E89FF !important;
+    border-bottom: #2E89FF 3px solid;
+    cursor: unset;
+}
+.active i{
+    color: #2E89FF !important;
+}
+.active:hover{
+    cursor: default;
+    background-color: unset !important ;
+}
+ /* //////////////////////////// المسنجر ////////////////////// */
+ .contact{
+    width: 50px;
+    height: 50px;
+    background-color: #3d4042;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    transition: 250ms;
+ }
+ .contact:hover{
+     background-color: #636668;
+ }
+ .contact i{
+     font-size: 20px;
+ }
+ .n_contact{
+    width: 20px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgb(2, 82, 2);
+    color: rgb(38, 255, 49);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+    left: 4px;
+ }
